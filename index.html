@@ -1,9 +1,9 @@
 <html>
-  <head>
+<head>
     <style>
         body {
             background-color: #520288; /* темный фон */
-            color: rgb(24, 172, 81); /* белый текст */
+            color: rgb(24, 172, 81); /* зеленый текст */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -11,37 +11,51 @@
         }
         
         h1 {
-            color: #eb0000; /* ярко-голубой заголовок */
+            color: #eb0000; /* красный заголовок */
             margin-bottom: 20px;
         }
         
         p {
-            color: #f10101; /* светло-серый текст */
+            color: #f10101; /* красный текст */
             margin-bottom: 30px;
         }
         
         video {
-            display: block;
-            margin: 0 auto;
-            border: 3px solid #000000;/*рамочка*/
+            display: none; /* скрываем видео изначально */
+            margin: 20px auto;
+            border: 3px solid #000000;
             border-radius: 10px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-  <h1 style="text-align: center;">Hello world</h1>
-  <p style="text-align: center;"> Your are Reade?</p>
-  <button onclick="myFunction()">meme?</button>
+    <h1>Hello world</h1>
+    <p>Your are Reade?</p>
+    <button onclick="myFunction()">meme?</button>
+    
+    <video id="myVideo" controls width="420" height="630">
+        <source src="video.mp4" type="video/mp4">
+    </video>
 
-<script>
-function myFunction() {
-    alert('Кнопка нажата!');
-    <video controls width="420" height="630" style="display: block; margin: 0 auto;">
-    <source  src="video.mp4" type="video/mp4">
- 
-}
-</script>
- 
+    <script>
+    function myFunction() {
+        alert('Кнопка нажата!');
+        document.getElementById('myVideo').style.display = 'block';
+    }
+    </script>
 </body>
-
 </html>
