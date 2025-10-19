@@ -1,0 +1,13 @@
+@font-face {
+    font-family:"myfont" ;
+    src: url('../fonts/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+}
