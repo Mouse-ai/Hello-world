@@ -1,118 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html1>
+
+  <head>
     <meta charset="UTF-8">
-    <title>Hello world</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        @font-face {
-            font-family: "myfont";
-            src: url('fonts/AlexBrush-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        
-        body {
-            font-family: 'myfont', cursive;
-            background-color: rgb(204, 102, 218); 
-            font-family: 'Poppins', Arial, sans-serif; 
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        h1 {
-            color: rgb(250, 235, 146); 
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        p {
-            color: rgb(250, 235, 146); 
-            margin-bottom: 30px;
-            font-weight: 400;
-        }
-        
-        video {
-            display: none; 
-            margin: 20px auto;
-            border: 3px solid #000000;
-            border-radius: 10px;
-            max-width: 100%; 
-        }
-        
-        button {
-            background-color: rgb(153, 41, 234);
-            color:rgb(250,235,146);
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: 'Inter', sans-serif; /* Единый шрифт */
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        button:hover {
-            background-color: rgb(153, 41, 234);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgb(0,0,0);
-        }
-        
-        /* Дополнительные улучшения */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Анимация появления видео */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Hello world</h1>
-        <p>Are you ready?</p> <!-- Исправлена опечатка -->
-        <button onclick="myFunction()">Show meme</button>
-        
-        <video id="myVideo" controls width="420" height="630">
-            <source src="video.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-        </video>
-    </div>
-
-    <script>
-    function myFunction() {
-        alert('Кнопка нажата!');
-        const video = document.getElementById('myVideo');
-        video.style.display = 'block';
-        video.classList.add('fade-in'); // Добавляем анимацию
-        
-        // Автовоспроизведение (опционально)
-        video.play().catch(e => console.log(''));
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="style.css">
     
-    // Дополнительная функциональность - скрыть видео при клике
-    document.getElementById('myVideo').addEventListener('click', function() {
-        this.style.display = 'none';
-    });
+  </head>
+
+
+
+
+  <body>
+    <h1 class="h1">Оценка
+      профессиональных
+      компетенций
+      сотрудника
+    </h1>
+    <h2 class="h2">Преимущества</h2>
+    <p1 class="p1">Объективный анализ навыков
+      для карьерного роста и развития
+      компании</p1>
+    <h3 class="h3">Анализ навыков</h3>
+    <p2 class="p2">Процесс глубокой диагностики профессиональных качеств</p2>
+    <button type="button" class="btn">Начать тестирование</button>
+    <h4 class="h4">О сервисе</h4>
+    <a class="a1">helloworldd401@gmail.com | +7 937 836 84 62</a>
+    <img src="img/Frame 3.jpg" width="380" height="86" class="logo2">
+    <img src="img/Frame 9.png" width="1536" height="452" class="gr9">
+    <img src="img/Chart.png" width="603" height="465" class="chart">
+    <img src="img/Frame 8.png" width="680" height="389" class="gr8">
+    <img src="img/Group 26.png" width="1474" height="434" class="gr26">
+    <img src="img/Group 25.png" width="1075" height="937" alt="Group25" class="gr25">
+    <img src="img/Frame 3.jpg" width="481" height="106" alt="logo" class="logo">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', function () {
+          navMenu.classList.toggle('active');
+        });
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+          });
+        });
+      });
     </script>
-</body>
-</html>
-
-
-
-
-
-
-
+  </body>
+</html1>

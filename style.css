@@ -1,0 +1,341 @@
+/* Базовые сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #1E40AF;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1A1F36;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1E40AF;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Очень маленькие устройства */
+@media (max-width: 320px) {
+    .hero {
+        padding: 5rem 0.5rem 2rem;
+    }
+
+    .features {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Nunito-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+    /* Важно для производительности */
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    /* координата Y */
+    left: 40px;
+    /* координата X */
+
+}
+
+.gr25 {
+    position: absolute;
+    top: 47px;
+    left: 787px;
+
+}
+
+.h1 {
+    position: absolute;
+    top: 267px;
+    left: 69px;
+    white-space: pre-line;
+    font-size: 64px;
+    font: weight 600%;
+}
+
+.p1 {
+    position: absolute;
+    top: 658px;
+    left: 69px;
+    white-space: pre-line;
+    font-size: 36px;
+    font: weight 600%;
+    color: #2D3748;
+}
+
+.btn {
+    /* Размер и отступы */
+    display: inline-block;
+    padding: 12px 24px;
+
+    /* Текст */
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    /* Внешний вид */
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+
+    /* Анимация */
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 856px;
+    left: 284px;
+}
+
+.h2 {
+    position: absolute;
+    top: 1088px;
+    left: 214px;
+    white-space: pre-line;
+    font-size: 64px;
+    font: weight 600%;
+    font-family: 'MyCustomFont', sans-serif;
+
+}
+.gr26{
+    position: absolute;
+    top: 1180px;
+    left: 214px;
+}
+.h3{
+    position: absolute;
+    top: 1803px;
+    left: 214px;
+    white-space: pre-line;
+    font-size: 64px;
+    font: weight 600%;
+    font-family: 'MyCustomFont', sans-serif;
+
+
+}
+.p2{
+    position: absolute;
+    top: 1882px;
+    left: 214px;
+    font-size: 36px;
+    font: weight 600%;
+    color: #2D3748;
+    font-family: 'MyCustomFont', sans-serif;
+
+}
+.chart{
+    position: absolute;
+    top: 2007px;
+    left: 223px;
+
+}
+.gr8{
+    position: absolute;
+    top: 2007px;
+    left: 1070px;
+}
+.h4{
+    position: absolute;
+    top: 2556px;
+    left: 214px;
+    font-size: 36px;
+    font: weight 600%;
+    font-family: 'MyCustomFont', sans-serif;
+}
+.gr9{
+    position: absolute;
+    top: 2648px;
+    left: 214px;
+
+}
+.logo2{
+    position: absolute;
+    top: 3700px;
+    left: 200px;
+}
+.a1{
+    position: absolute;
+    top: 3700px;
+    left: 859px;
+    font-size: 36px;
+    font: weight 400%;
+    font-family: 'MyCustomFont', sans-serif;
+
+}
